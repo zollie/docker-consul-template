@@ -1,5 +1,5 @@
-#!/bin/bash 
+#!/bin/sh 
 
-cmd="consul-template" "$@" 
+shift;
 
-$cmd
+consul-template "$@" 

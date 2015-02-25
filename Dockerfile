@@ -5,8 +5,10 @@ RUN cd /bin && gzip -dc /tmp/consul-template.tgz | tar -xf - && rm /tmp/consul-t
 RUN mv /bin/consul-template_0.6.0_linux_amd64/consul-template /bin/consul-template 
 RUN rmdir /bin/consul-template_0.6.0_linux_amd64
 
+RUN apk-install -t docker-io
+
 ADD run.sh run.sh
 
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]
 
 
