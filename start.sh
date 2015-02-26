@@ -1,8 +1,4 @@
 #!/bin/bash 
 
-#
-# Pass args for consul-template
-#
-
-docker run -it --name=consul-template --restart=always zollie/consul-template "$@" 
+docker run -d --name=consul-template --restart=always zollie/consul-template "$@" 
 
