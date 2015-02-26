@@ -1,4 +1,6 @@
 #!/bin/bash 
 
-docker run -d --name=consul-template --restart=always zollie/consul-template "$@" 
+name=$1; shift
+
+docker run -d --restart=always --name=$name zollie/consul-template "$@" 
 
